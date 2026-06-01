@@ -9943,11 +9943,11 @@ function setVizAlgo(algo, btn){
   document.querySelectorAll('.viz-tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
   const info={
-    bubble:'<strong style="color:var(--text)">Bubble Sort</strong> — O(n²) в среднем/худшем, O(n) в лучшем. Попарно меняет соседей — "всплывает" максимум. Стабильный.',
-    selection:'<strong style="color:var(--text)">Selection Sort</strong> — O(n²) всегда. Ищет минимум на каждом шаге и ставит на место. Нестабильный, мало обменов.',
-    insertion:'<strong style="color:var(--text)">Insertion Sort</strong> — O(n²) среднее, O(n) лучшее. Строит отсортированную часть слева. Эффективен для почти отсортированных данных.',
-    merge:'<strong style="color:var(--text)">Merge Sort</strong> — O(n log n) всегда. Делит и сливает. Стабильный, требует O(n) доп. памяти. Гарантированная производительность.',
-    quick:'<strong style="color:var(--text)">Quick Sort</strong> — O(n log n) в среднем, O(n²) в худшем. Выбирает pivot и разбивает массив. На практике быстрее Merge Sort.',
+    bubble:'<strong style="color:var(--text)">Сортировка пузырьком</strong> — O(n²) в среднем/худшем, O(n) в лучшем. Попарно меняет соседей — "всплывает" максимум. Стабильный.',
+    selection:'<strong style="color:var(--text)">Сортировка выбором</strong> — O(n²) всегда. Ищет минимум на каждом шаге и ставит на место. Нестабильный, мало обменов.',
+    insertion:'<strong style="color:var(--text)">Сортировка вставками</strong> — O(n²) среднее, O(n) лучшее. Строит отсортированную часть слева. Эффективен для почти отсортированных данных.',
+    merge:'<strong style="color:var(--text)">Сортировка слиянием</strong> — O(n log n) всегда. Делит и сливает. Стабильный, требует O(n) доп. памяти. Гарантированная производительность.',
+    quick:'<strong style="color:var(--text)">Быстрая сортировка</strong> — O(n log n) в среднем, O(n²) в худшем. Выбирает pivot и разбивает массив. На практике быстрее Merge Sort.',
   };
   document.getElementById('viz-info').innerHTML=info[algo]||'';
   vizStop(); vizRegenerate();
